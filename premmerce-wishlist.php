@@ -5,15 +5,14 @@ use Premmerce\Wishlist\WishlistPlugin;
 /**
  *
  * @wordpress-plugin
- * Plugin Name:       Premmerce Wishlist for WooCommerce
- * Plugin URI:        https://premmerce.com/woocommerce-wishlist/
+ * Plugin Name:       Catalopiso Project Board [Modded]
+ * Plugin URI:        https://tugasvirtualsolutions.com/
  * Description:       This plugin provides the possibility for your customers to create wishlists with the further possibility to share them with friends.
- * Version:           1.1.8
- * Author:            Premmerce
- * Author URI:        https://premmerce.com/
+ * Version:           1.1.9
+ * Author:            Tugas Virtual Solution
+ * Author URI:        https://tugasvirtualsolutions.com/
  * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       premmerce-wishlist
+ * Text Domain:       project-board
  * Domain Path:       /languages
  *
  * WC requires at least: 3.0.0
