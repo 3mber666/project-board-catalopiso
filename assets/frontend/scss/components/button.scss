@@ -1,0 +1,27 @@
+.wl-button {
+
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    color: #6d6d6d;
+    fill: #6d6d6d;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 100;
+  }
+}
+
+.wishlist-btn {
+  display: inline-flex;
+  align-items: center;
+
+  .svg-icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+  }
+}

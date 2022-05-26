@@ -1,0 +1,75 @@
+.wl-form {
+
+  &__row {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__field {
+
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+
+    //modifiers
+    &--hor {
+      display: table;
+      width: 100%;
+    }
+  }
+
+  &__field-btn {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  /*
+  * Form field title
+  */
+  &__label {
+    padding-bottom: 8px;
+  }
+
+  &__inner {
+
+  }
+
+  &__checkbox {
+    display: table;
+
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+
+    &-field {
+      display: table-cell;
+      width: 20px;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    &-inner {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &-title {
+      color: #000;
+      line-height: 1.1;
+
+      &--disabled {
+        color: #9aa1ab;
+      }
+    }
+
+    &-select {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+
+}

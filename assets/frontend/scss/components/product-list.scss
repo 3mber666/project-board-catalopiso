@@ -1,0 +1,24 @@
+.wl-product-list {
+  list-style: none;
+  font-size: 0;
+  margin-left: -22px!important;
+  margin-right: -22px!important;
+
+  & > * {
+    font-size: 14px!important;
+    display: inline-block!important;
+    float: none!important;
+    vertical-align: top!important;
+    width: 100%!important;
+    margin: 0!important;
+    padding: 0 22px 35px!important;
+    position: relative;
+
+    @media (min-width: 768px){
+      width: 50%!important;
+    }
+    @media (min-width: 960px){
+      width: 33.3333%!important;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.wl-frame {
+  font-size: 1rem;
+
+  &__header {
+    position: relative;
+    padding: 0.85em 1.4em;
+    margin-bottom: 1em;
+    background: #f0f0f0;
+
+    &-nav {
+      display: inline-block;
+      vertical-align: baseline;
+      font-size: 0.9em;
+
+      &:before {
+        content: '/';
+        padding: 0 10px;
+      }
+    }
+
+    &-link {
+      display: inline;
+      color: #96588a;
+      padding: 0;
+      font-weight: normal;
+      -webkit-appearance: none;
+      box-shadow: none;
+      border: none;
+      background: transparent;
+
+      &:hover {
+        background: transparent;
+        color: #96588a;
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+
+    &-link {
+
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &__arrow {
+    color: #9aa1ab;
+    font-size: 24px;
+    line-height: 1;
+    width: 40px;
+    border-left: 1px solid #fff;
+
+    &:not(.slick-disabled):hover {
+      background-color: darken(#f0f0f0, 2.5%);
+    }
+
+    & > svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    &.slick-disabled {
+      & > svg {
+        opacity: .3;
+      }
+    }
+  }
+
+  &__inner {
+
+  }
+
+  &__row {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+}

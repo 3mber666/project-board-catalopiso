@@ -1,0 +1,10 @@
+.svg-icon {
+  max-height: 100%;
+  max-width: 100%;
+  fill: currentColor;
+
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}

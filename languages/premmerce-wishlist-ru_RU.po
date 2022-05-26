@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Wishlist\n"
+"POT-Creation-Date: 2018-08-22 10:58+0300\n"
+"PO-Revision-Date: 2018-08-22 10:59+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: premmerce-wishlist.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: src/Admin/Admin.php:141 src/Admin/Admin.php:142 src/Admin/Admin.php:270
+msgid "Wishlists"
+msgstr "Списки желаний"
+
+#: src/Admin/Admin.php:218
+msgid ""
+"You attempted to edit an item that doesn’t exist. Perhaps it was deleted?"
+msgstr ""
+"Вы попытались отредактировать несуществующий элемент. Может быть, он удалён?"
+
+#: src/Admin/Admin.php:273
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+#: src/Admin/Admin.php:275
+msgid "Account"
+msgstr "Аккаунт"
+
+#: src/Admin/Admin.php:294 src/Admin/Admin.php:309
+msgid "Items deleted."
+msgstr "Элементы удалены."
+
+#: src/Admin/Admin.php:296 src/Admin/Admin.php:311
+msgid "Error."
+msgstr "Ошибка."
+
+#: src/Admin/WishlistTable.php:33
+msgid "lists"
+msgstr "списки"
+
+#: src/Admin/WishlistTable.php:34
+msgid "list"
+msgstr "список"
+
+#: src/Admin/WishlistTable.php:122
+msgid "No user"
+msgstr "Нет пользователя"
+
+#: src/Admin/WishlistTable.php:160
+msgid "Day"
+msgstr "День"
+
+#: src/Admin/WishlistTable.php:161
+msgid "Three days"
+msgstr "Три дня"
+
+#: src/Admin/WishlistTable.php:162
+msgid "Week"
+msgstr "Неделя"
+
+#: src/Admin/WishlistTable.php:163
+msgid "Month"
+msgstr "Месяц"
+
+#: src/Admin/WishlistTable.php:164
+msgid "Three months"
+msgstr "Три месяца"
+
+#: src/Admin/WishlistTable.php:165
+msgid "Six months"
+msgstr "Шесть месяцев"
+
+#: src/Admin/WishlistTable.php:166
+msgid "Year"
+msgstr "Год"
+
+#: src/Admin/WishlistTable.php:184 src/Admin/WishlistViewTable.php:73
+#: views/admin/wishlist-user-list.php:8
+msgid "Name"
+msgstr "Название"
+
+#: src/Admin/WishlistTable.php:185 views/admin/wishlist-view.php:18
+msgid "User"
+msgstr "Пользователь"
+
+#: src/Admin/WishlistTable.php:186 views/admin/wishlist-user-list.php:9
+msgid "Products count"
+msgstr "Количество продуктов"
+
+#: src/Admin/WishlistTable.php:187 views/admin/wishlist-user-list.php:10
+msgid "Created"
+msgstr "Созданный"
+
+#: src/Admin/WishlistTable.php:188 views/admin/wishlist-user-list.php:11
+msgid "Modified"
+msgstr "Изменен"
+
+#: src/Admin/WishlistTable.php:213 src/Admin/WishlistTable.php:243
+#: views/frontend/wishlist-btn-delete.php:5 views/frontend/wishlist-page.php:58
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/Admin/WishlistTable.php:235
+msgid "View"
+msgstr "Перейти"
+
+#: src/Admin/WishlistTable.php:259
+msgid "View on site"
+msgstr "Перейти на сайте"
+
+#: src/Admin/WishlistTable.php:346
+msgid "No wishlists found."
+msgstr "Списков пожеланий не найдено."
+
+#: src/Admin/WishlistViewTable.php:32
+msgid "products"
+msgstr "продукты"
+
+#: src/Admin/WishlistViewTable.php:33
+msgid "product"
+msgstr "продукт"
+
+#: src/Models/WishlistModel.php:55
+msgid "My Project Board"
+msgstr "Мой список желаний"
+
+#: src/RestApi/RestApi.php:130 src/RestApi/RestApi.php:187
+msgid "Move to another list"
+msgstr "Переместить в другой список"
+
+#: src/RestApi/RestApi.php:133 src/RestApi/RestApi.php:190
+msgid "Add to your list"
+msgstr "В избранные"
+
+#: src/Widget/WishlistWidget.php:40
+msgid "Premmerce Wishlist"
+msgstr "Premmerce Wishlist"
+
+#: src/Widget/WishlistWidget.php:41
+msgid "List of Wishlists"
+msgstr "Списки желаний"
+
+#: src/WishlistPlugin.php:151
+#, php-format
+msgid "The %s plugin requires %s plugin to be active!"
+msgstr "Для работы плагина %s нужен плагин %s"
+
+#: views/admin/main.php:4 views/admin/wishlist-list.php:5
+#: views/admin/wishlist-user-list.php:3
+msgid "Premmerce WooCommerce Wishlist"
+msgstr "Premmerce WooCommerce Wishlist"
+
+#: views/admin/tabs/wishlist-list.php:7 views/admin/wishlist-list.php:11
+msgid "Search by User"
+msgstr "Поиск по пользователю"
+
+#: views/admin/wishlist-extra-tablenav.php:6
+msgid "Modified date older than:"
+msgstr "Дата изменения старше чем:"
+
+#: views/admin/wishlist-extra-tablenav.php:13
+msgid "Delete wishlists without user"
+msgstr "Удаление списков желаний без пользователя"
+
+#: views/admin/wishlist-user-list.php:39
+msgid "No wishlists"
+msgstr "Нет списков желаний"
+
+#: views/admin/wishlist-view.php:5 views/frontend/wishlist-popup.php:146
+#: views/widget/wishlist-widget.php:11
+msgid "Wishlist"
+msgstr "Список желаний"
+
+#: views/admin/wishlist-view.php:8
+msgid "Back to Premmerce WooCommerce Wishlist"
+msgstr "Назад к Premmerce WooCommerce Wishlist"
+
+#: views/frontend/wishlist-btn-move.php:7 views/frontend/wishlist-popup.php:124
+msgid "Move"
+msgstr "Переместить"
+
+#: views/frontend/wishlist-btn.php:14 views/frontend/wishlist-popup.php:119
+msgid "View Wishlists"
+msgstr "Просмотреть список желаний"
+
+#: views/frontend/wishlist-btn.php:18
+msgid "Add to Wishlist"
+msgstr "Добавить к списку желаний"
+
+#: views/frontend/wishlist-page.php:20
+msgid "Your wishlist is empty"
+msgstr "Вы еще не добавили в список желаний ни одного товара"
+
+#: views/frontend/wishlist-page.php:23 views/frontend/wishlist-page.php:90
+msgid ""
+"Once added new items, you'll be able to continue shopping any time and also "
+"share the information about the purchase with your friends."
+msgstr ""
+"После добавления товаров, вы можете продолжить покупки в любое время, а "
+"также делиться вашим списком желаний с друзьями."
+
+#: views/frontend/wishlist-page.php:51 views/frontend/wishlist-rename.php:7
+#: views/frontend/wishlist-rename.php:44
+msgid "Rename"
+msgstr "Переименовать"
+
+#: views/frontend/wishlist-page.php:87
+msgid "This list is empty"
+msgstr "Этот список пуст"
+
+#: views/frontend/wishlist-popup.php:29
+msgid "Item successfuly added to your Wishlist!"
+msgstr "Товар успешно добавлен в список желаний!"
+
+#: views/frontend/wishlist-popup.php:54
+msgid "Select a list"
+msgstr "Выберите список"
+
+#: views/frontend/wishlist-popup.php:84
+msgid "Create a new list"
+msgstr "Создать новый список"
+
+#: views/frontend/wishlist-popup.php:111 views/frontend/wishlist-rename.php:32
+msgid "Close"
+msgstr "Закрыть"
+
+#: views/frontend/wishlist-popup.php:126
+msgid "Add"
+msgstr "Добавить"
+
+#: views/frontend/wishlist-rename.php:20
+msgid "List name"
+msgstr "Название списка"
+
+#: views/frontend/wishlist-rename.php:36
+msgid "Save"
+msgstr "Сохранить"
+
+#: views/widget/wishlist-widget-form.php:2
+msgid "Title"
+msgstr "Название"
+
+#~ msgid "Edit list"
+#~ msgstr "Редактировать"
+
+#~ msgid "Wishlist name"
+#~ msgstr "Название списка желаний"
+
+#~ msgid "Delete wishlist"
+#~ msgstr "Удалить список желаний"
+
+#~ msgid "Share link"
+#~ msgstr "Поделиться ссылкой"
+
+#~ msgid "Wishlist is empty!"
+#~ msgstr "Список пожеланий пуст!"
+
+#~ msgid "Wishlist from WooCommerce Wishlist"
+#~ msgstr "Список желаний из модуля WooCommerce Wishlist"
+
+#~ msgid "Open in Wishlist"
+#~ msgstr "В избранных"
+
+#~ msgid "Edit"
+#~ msgstr "Изменить"
+
+#~ msgid "Go to wishlist"
+#~ msgstr "К избранным"
+
+#~ msgid "Add to list"
+#~ msgstr "Добавить"
+
+#~ msgid "Share link:"
+#~ msgstr "Поделиться ссылкой:"
+
+#~ msgid "Delete by Modified date"
+#~ msgstr "Удалить по дате изменения"
+
+#~ msgid "Error. Wishlist ID unexist."
+#~ msgstr "Ошибка. Код списка желаний не существует."
+
+#~ msgid "Back"
+#~ msgstr "Назад"
+
+#~ msgid "Id"
+#~ msgstr "Код"
