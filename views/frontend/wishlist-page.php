@@ -858,7 +858,7 @@ tailwind.config = {
   important: true,
 }
 </script>
-<div class="hidden z-[999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
+<div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
 <div
