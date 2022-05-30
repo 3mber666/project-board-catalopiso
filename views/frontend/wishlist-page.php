@@ -88,13 +88,20 @@ $(function() {
 
 });
 
-$(".share-project-btn").click(function(event){
-    $("#authentication-modal").removeClass("hidden");
+$(".share-project-btn").click(function(event) {
+
     $('.orderforsample:checkbox:checked').each(function(){
         $("#order_items_names").append('<li class="w-full text-gray-900 bg-gray-50 px-4 py-2 border-b border-gray-200">• ' + $(this).val() + '</li>');
     });
-    var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
-    console.log(project_board_names);
+
+    if(!$('#order_items_names').is(':empty')) {
+        $("#authentication-modal").removeClass("hidden");
+    }
+
+    if($('#order_items_names').is(':empty')) {
+        alert('Please select at least one product from the list');
+    }
+    
 });
 
 $("#close-order").click(function(event){
@@ -434,8 +441,8 @@ $("#remove-all-btn").click(function() {
 $('[type=checkbox]').prop("checked", false);
 });
 
-$("#share-project-btn").click(function(event){
-    $("#authentication-modal").removeClass("hidden");
+$("#share-project-btn").click(function(event) {
+
     event.preventDefault();
     var searchIDs = $("input:checkbox:checked").map(function(){
         return $(this).attr("data-title");
@@ -453,7 +460,15 @@ $("#share-project-btn").click(function(event){
 
 
     for(i=0;i<searchIDs.length;i++){
-        $("#projectboard-names").append('<a id="project-urls" href="'+searchIDs1[i]+'">' + searchIDs[i] + '</a>, ');
+        $("#projectboard-names").append('<li class="w-full text-gray-900 bg-gray-50 px-4 py-2 border-b border-gray-200"><a class="no-underline" id="project-urls" href="'+searchIDs1[i]+'">' + searchIDs[i] + '</a></li>');
+    }
+
+    if(!$('#projectboard-names').is(':empty')) {
+        $("#authentication-modal").removeClass("hidden");
+    }
+
+    if($('#projectboard-names').is(':empty')) {
+        alert('Please select at least one Project Board');
     }
 
 });
@@ -518,47 +533,66 @@ tailwind.config = {
   important: true,
 }
 </script>
-<div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+
+<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full">
+    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+            </button>
+            <div class="p-6 text-center">
+                <svg class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this product?</h3>
+                <button data-modal-toggle="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                    Yes, I'm sure
+                </button>
+                <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
 <div
   class="max-h-full overflow-hidden border-none relative flex flex-col w-full pointer-events-auto rounded-md outline-none text-current">
-  <div class="relative bg-white rounded-lg shadow bg-gray-800 mx-5">
+  <div class="relative bg-white rounded-lg shadow mx-5">
   
   <button id="cancel-modal" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
 
         <div class="py-6 px-6 lg:px-8">
-            <h3 class="mb-4 text-xl font-medium text-white dark:text-white">Share Project Board</h3>
+            <h3 class="mb-4 text-xl font-medium text-gray-900">Share Project Board</h3>
             <form class="space-y-6" method="POST" action="" id="sub">
                 <div>
-                    <label for="email1" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">From email</label>
+                    <label for="email1" class="block mb-2 text-sm font-medium text-gray-900">From email</label>
                     <input type="text" name="email1" id="email1" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" >
                 </div>
 
                 <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Recipient Email</label>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Recipient Email</label>
                     <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com [multiple recipients by comma (,)]" required="" >
                 </div>
 
                 <div>
-                    <label for="name" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Full Name</label>
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
                     <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your fullname" required="" >
                 </div>
 
                 <div>
-                    <label for="company_name" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Company Name</label>
+                    <label for="company_name" class="block mb-2 text-sm font-medium text-gray-900">Company Name</label>
                     <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Company Name" required="" >
                 </div>
 
                 <div>
-                    <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Phone</label>
+                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>
                     <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="" >
                 </div>
                 
                 <div>
-                <label for="message" class="block mb-2 text-sm font-medium text-white dark:text-gray-400">Your Note</label>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Note</label>
                 <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
                 </div>
 
@@ -566,23 +600,22 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
                 <div class="flex flex-wrap">
                     <div class="flex items-center mr-4">
                         <input id="red-radio" type="radio" value="show" name="coloredradio" id="coloredradio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="red-radio" class="ml-2 text-sm font-medium text-white dark:text-gray-300">Show Pricing</label>
+                        <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900">Show Pricing</label>
                     </div>
                     
                     <div class="flex items-center mr-4">
                         <input id="green-radio" type="radio" checked value="hide" name="coloredradio" id="coloredradio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="green-radio" class="ml-2 text-sm font-medium text-white dark:text-gray-300">Hide Pricing</label>
+                        <label for="green-radio" class="ml-2 text-sm font-medium text-gray-900">Hide Pricing</label>
                     </div>
                 </div>
                 </div>
-                <div>
-                <div class="flex p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
-                    <svg class="inline flex-shrink-0 mr-3 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                <div>
-                    <span id="projectboard-names"></span>
-                </div>
 
-                </div>
+
+                <div>
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Project Board Selected:</li>
+                    <div id="projectboard-names"></div>
+                </ul>
                 </div>
                 <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Share now</button>
         </form>
@@ -772,12 +805,18 @@ $(function() {
 });
 
 $(".share-project-btn").click(function(event){
-    $("#authentication-modal").removeClass("hidden");
     $('.orderforsample:checkbox:checked').each(function(){
         $("#order_items_names").append('<li class="w-full text-gray-900 bg-gray-50 px-4 py-2 border-b border-gray-200">• ' + $(this).val() + '</li>');
     });
-    var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
-    console.log(project_board_names);
+
+    if(!$('#order_items_names').is(':empty')) {
+        $("#authentication-modal").removeClass("hidden");
+    }
+
+    if($('#order_items_names').is(':empty')) {
+        alert('Please select at least one product from the list');
+    }
+
 });
 
 $("#close-order").click(function(event){
@@ -788,6 +827,7 @@ $("#close-order").click(function(event){
 });
 </script>
 <script>
+jQuery(document).ready(function ($) {
 jQuery('#sub').submit(function(e){
 
     e.preventDefault();
@@ -828,6 +868,7 @@ jQuery.ajax({
     }
 
 }); 
+});
 });
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
