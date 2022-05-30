@@ -149,7 +149,7 @@ jQuery.ajax({
     },
     
     success:function(res){
-        alert("Project Board Sent Successfully!");
+        alert("Request Successfully Sent!");
     }
 
 }); 
@@ -845,7 +845,7 @@ jQuery.ajax({
     },
     
     success:function(res){
-        alert("Project Board Sent Successfully!");
+        alert("Request Successfully Sent!");
     }
 
 }); 
