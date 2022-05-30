@@ -169,7 +169,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
   class="max-h-full overflow-hidden border-none relative flex flex-col w-full pointer-events-auto rounded-md outline-none text-current">
   <div class="relative bg-white rounded-lg shadow mx-5">
   
-  <button id="close-order" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+  <button id="close-order" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center " data-modal-toggle="authentication-modal">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
 
@@ -178,51 +178,51 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
             <form class="space-y-6" method="POST" action="" id="sub">
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
-                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" >
+                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="name@company.com" required="" >
                 </div>
                 <div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Note</label>
-                    <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                    <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Leave a comment..."></textarea>
                 </div>
 
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
-                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your fullname" required="" >
+                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your fullname" required="" >
                 </div>
                 <div>
                     <label for="company_name" class="block mb-2 text-sm font-medium text-gray-900">Company Name</label>
-                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Company Name" required="" >
+                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Company Name" required="" >
                 </div>
 
                 <div>
                     <label for="street_address" class="block mb-2 text-sm font-medium text-gray-900">Street Address</label>
-                    <input type="text" name="street_address" id="street_address" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="" >
+                    <input type="text" name="street_address" id="street_address" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Phone Number" required="" >
                 </div>          
                 <div class="grid xl:grid-cols-2 xl:gap-6">
                     <div class="relative z-0 w-full group">
                         <label for="city" class="block mb-2 text-sm font-medium text-gray-900">City</label>
-                        <input type="text" name="city" id="city" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your City">
+                        <input type="text" name="city" id="city" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Your City">
                     </div>
                     <div class="relative z-0 w-full group">
                         <label for="state" class="block mb-2 text-sm font-medium text-gray-900">State</label>
-                        <input type="text" name="state" id="state" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your State" required="">
+                        <input type="text" name="state" id="state" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Your State" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="zipcode" class="block mb-2 text-sm font-medium text-gray-900">Zip</label>
-                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
+                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Zipcode" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>
-                        <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="">
+                        <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Phone Number" required="">
                     </div>
                 </div>
                 <div>
-                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Samples Being Requested:</li>
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg ">
+                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg  font-bold">List of Samples Being Requested:</li>
                     <div id="order_items_names"></div>
                 </ul>
                 </div>
-                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Share now</button>
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Order Now</button>
         </form>
     </div>
   </div>
@@ -244,7 +244,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
   <div class="max-w-7xl mx-auto md:rounded-lg md:shadow-lg md:ring-1 md:ring-black md:ring-opacity-5 px-4 sm:px-6 my-5">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
       <div class="flex justify-start lg:w-0 lg:flex-1">
-      <a class="wl-frame__title-link font-sans text-lg font-medium text-slate-900 dark:text-slate-200 no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
+      <a class="wl-frame__title-link font-sans text-lg font-medium text-slate-900 no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
       </div>
       <div class="-mr-2 -my-2 md:hidden">
         <button id="close-share" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -265,7 +265,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
           <div>
-            <a class="wl-frame__title-link font-sans text-sm text-slate-900 dark:text-slate-200 no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
+            <a class="wl-frame__title-link font-sans text-sm text-slate-900  no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
           </div>
           <div class="-mr-2">
             <button type="button" class="select_all_mobile bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -533,25 +533,6 @@ tailwind.config = {
   important: true,
 }
 </script>
-
-<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full">
-    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-            </button>
-            <div class="p-6 text-center">
-                <svg class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this product?</h3>
-                <button data-modal-toggle="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                    Yes, I'm sure
-                </button>
-                <button data-modal-toggle="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No, cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
@@ -559,7 +540,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
   class="max-h-full overflow-hidden border-none relative flex flex-col w-full pointer-events-auto rounded-md outline-none text-current">
   <div class="relative bg-white rounded-lg shadow mx-5">
   
-  <button id="cancel-modal" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+  <button id="cancel-modal" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="authentication-modal">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
 
@@ -568,43 +549,43 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
             <form class="space-y-6" method="POST" action="" id="sub">
                 <div>
                     <label for="email1" class="block mb-2 text-sm font-medium text-gray-900">From email</label>
-                    <input type="text" name="email1" id="email1" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" >
+                    <input type="text" name="email1" id="email1" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="name@company.com" required="" >
                 </div>
 
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Recipient Email</label>
-                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com [multiple recipients by comma (,)]" required="" >
+                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="name@company.com [multiple recipients by comma (,)]" required="" >
                 </div>
 
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
-                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your fullname" required="" >
+                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your fullname" required="" >
                 </div>
 
                 <div>
                     <label for="company_name" class="block mb-2 text-sm font-medium text-gray-900">Company Name</label>
-                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Company Name" required="" >
+                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Company Name" required="" >
                 </div>
 
                 <div>
                     <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>
-                    <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="" >
+                    <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Phone Number" required="" >
                 </div>
                 
                 <div>
                 <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Note</label>
-                <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Leave a comment..."></textarea>
                 </div>
 
                 <div>
                 <div class="flex flex-wrap">
                     <div class="flex items-center mr-4">
-                        <input id="red-radio" type="radio" value="show" name="coloredradio" id="coloredradio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <input id="red-radio" type="radio" value="show" name="coloredradio" id="coloredradio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 focus:ring-2  ">
                         <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900">Show Pricing</label>
                     </div>
                     
                     <div class="flex items-center mr-4">
-                        <input id="green-radio" type="radio" checked value="hide" name="coloredradio" id="coloredradio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <input id="green-radio" type="radio" checked value="hide" name="coloredradio" id="coloredradio" class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 focus:ring-2  ">
                         <label for="green-radio" class="ml-2 text-sm font-medium text-gray-900">Hide Pricing</label>
                     </div>
                 </div>
@@ -612,12 +593,12 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
 
 
                 <div>
-                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Project Board Selected:</li>
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  ">
+                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg  font-bold">List of Project Board Selected:</li>
                     <div id="projectboard-names"></div>
                 </ul>
                 </div>
-                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Share now</button>
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Share now</button>
         </form>
     </div>
   </div>
@@ -884,7 +865,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
   class="max-h-full overflow-hidden border-none relative flex flex-col w-full pointer-events-auto rounded-md outline-none text-current">
   <div class="relative bg-white rounded-lg shadow mx-5">
   
-  <button id="close-order" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+  <button id="close-order" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center " data-modal-toggle="authentication-modal">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
 
@@ -893,51 +874,51 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
             <form class="space-y-6" method="POST" action="" id="sub">
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
-                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" >
+                    <input type="text" name="email" id="email" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="name@company.com" required="" >
                 </div>
                 <div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your Note</label>
-                    <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                    <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Leave a comment..."></textarea>
                 </div>
 
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
-                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your fullname" required="" >
+                    <input type="text" name="name" id="name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your fullname" required="" >
                 </div>
                 <div>
                     <label for="company_name" class="block mb-2 text-sm font-medium text-gray-900">Company Name</label>
-                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Company Name" required="" >
+                    <input type="text" name="company_name" id="company_name" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Company Name" required="" >
                 </div>
 
                 <div>
                     <label for="street_address" class="block mb-2 text-sm font-medium text-gray-900">Street Address</label>
-                    <input type="text" name="street_address" id="street_address" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="" >
+                    <input type="text" name="street_address" id="street_address" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Phone Number" required="" >
                 </div>          
                 <div class="grid xl:grid-cols-2 xl:gap-6">
                     <div class="relative z-0 w-full group">
                         <label for="city" class="block mb-2 text-sm font-medium text-gray-900">City</label>
-                        <input type="text" name="city" id="city" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your City">
+                        <input type="text" name="city" id="city" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your City">
                     </div>
                     <div class="relative z-0 w-full group">
                         <label for="state" class="block mb-2 text-sm font-medium text-gray-900">State</label>
-                        <input type="text" name="state" id="state" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your State" required="">
+                        <input type="text" name="state" id="state" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your State" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="zip" class="block mb-2 text-sm font-medium text-gray-900">Zip</label>
-                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
+                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Zipcode" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>
-                        <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required="">
+                        <input type="number" name="phone" id="phone" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your Phone Number" required="">
                     </div>
                 </div>
                 <div>
-                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <li class="w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Samples Being Requested:</li>
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  ">
+                    <li class="w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg  font-bold">List of Samples Being Requested:</li>
                     <div id="order_items_names"></div>
                 </ul>
                 </div>
-                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Share now</button>
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Order Now</button>
         </form>
     </div>
   </div>
@@ -953,7 +934,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
   <div class="max-w-7xl mx-auto md:rounded-lg md:shadow-lg md:ring-1 md:ring-black md:ring-opacity-5 px-4 sm:px-6 my-5">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
       <div class="flex justify-start lg:w-0 lg:flex-1">
-      <a class="wl-frame__title-link font-sans text-lg font-medium text-slate-900 dark:text-slate-200 no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
+      <a class="wl-frame__title-link font-sans text-lg font-medium text-slate-900  no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
       </div>
       <div class="-mr-2 -my-2 md:hidden">
         <button id="close-share" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -974,7 +955,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
           <div>
-            <a class="wl-frame__title-link font-sans text-sm text-slate-900 dark:text-slate-200 no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
+            <a class="wl-frame__title-link font-sans text-sm text-slate-900  no-underline" <?php if(!$onlyView): ?> href="<?php echo $wishlist_url ?>" <?php endif; ?> rel="nofollow"><?php echo $wl['name']; ?></a>
           </div>
           <div class="-mr-2">
             <button type="button" class="select_all_mobile bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

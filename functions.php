@@ -83,7 +83,7 @@ function callback_send_email() {
 
         $headers = "Content-type:text/html;charset=UTF-8";
         $subject = "New Order";
-        $to = "nochvur@frederictonlawyer.com";
+        $to = "samplerequest@catalopiso.com";
         $body = "Here's the list of the orders <br>".
             "$w".
             "<br><br><br>".
