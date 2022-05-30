@@ -58,6 +58,10 @@ global $premmerce_wishlist_frontend;
     }
 }
 
+#left-area ul, .entry-content ul, .et-l--body ul, .et-l--footer ul, .et-l--header ul {
+    padding: 0 0 0px 0em !important;
+}
+
 </style>
 <script>
 jQuery(document).ready(function ($) {
@@ -87,7 +91,7 @@ $(function() {
 $(".share-project-btn").click(function(event){
     $("#authentication-modal").removeClass("hidden");
     $('.orderforsample:checkbox:checked').each(function(){
-        $("#order_items_names").append('<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">• ' + $(this).val() + '</li>');
+        $("#order_items_names").append('<li class="w-full text-gray-900 bg-gray-50 px-4 py-2 border-b border-gray-200">• ' + $(this).val() + '</li>');
     });
     var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
     console.log(project_board_names);
@@ -151,7 +155,7 @@ tailwind.config = {
   important: true,
 }
 </script>
-<div class="hidden z-[999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
+<div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
 <div
@@ -206,8 +210,8 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
                     </div>
                 </div>
                 <div>
-                <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <li class="w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Samples Being Requested:</li>
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="list-none w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Samples Being Requested:</li>
                     <div id="order_items_names"></div>
                 </ul>
                 </div>
@@ -514,7 +518,7 @@ tailwind.config = {
   important: true,
 }
 </script>
-<div class="hidden z-[999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+<div class="hidden z-[99999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
 <div
@@ -736,6 +740,11 @@ span.et_shop_image img {
         padding: 30px;
     }
 }
+
+#left-area ul, .entry-content ul, .et-l--body ul, .et-l--footer ul, .et-l--header ul {
+    padding: 0 0 0px 0em !important;
+}
+
 </style>
 <script>
 jQuery(document).ready(function ($) {
@@ -765,7 +774,7 @@ $(function() {
 $(".share-project-btn").click(function(event){
     $("#authentication-modal").removeClass("hidden");
     $('.orderforsample:checkbox:checked').each(function(){
-        $("#order_items_names").append('<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">• ' + $(this).val() + '</li>');
+        $("#order_items_names").append('<li class="w-full text-gray-900 bg-gray-50 px-4 py-2 border-b border-gray-200">• ' + $(this).val() + '</li>');
     });
     var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
     console.log(project_board_names);
@@ -882,7 +891,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
                     </div>
                 </div>
                 <div>
-                <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <ul class="w-full list-none text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full px-4 py-2 border-b text-green-700 bg-green-100 border-gray-200 rounded-t-lg dark:border-gray-600 font-bold">List of Samples Being Requested:</li>
                     <div id="order_items_names"></div>
                 </ul>

@@ -89,15 +89,15 @@ function callback_send_email() {
             "<br><br><br>".
             "<b>------</b><br>".
             "Customer Information: <br>".
-            "Name: $name <br>".
-            "Email: $email <br>".
-            "Note: $note <br>".
-            "Company Name: $company_name <br>".
-            "Street Address: $street_address <br>".
-            "City: $city <br>".
-            "State: $state <br>".
-            "Zipcode: $zipcode <br>".
-            "Phone: $phone <br>";
+            "Name: <b>$name</b> <br>".
+            "Email: <b>$email</b> <br>".
+            "Note: <b>$note</b> <br>".
+            "Company Name: <b>$company_name</b> <br>".
+            "Street Address: <b>$street_address</b> <br>".
+            "City: <b>$city</b> <br>".
+            "State: <b>$state</b> <br>".
+            "Zipcode: <b>$zipcode</b> <br>".
+            "Phone: <b>$phone</b> <br>";
         
         $mail = wp_mail($to, $subject, $body, $headers);
     }
