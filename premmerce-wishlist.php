@@ -8,7 +8,7 @@ use Premmerce\Wishlist\WishlistPlugin;
  * Plugin Name:       Catalopiso Project Board [Modded]
  * Plugin URI:        https://tugasvirtualsolutions.com/
  * Description:       This plugin provides the possibility for your customers to create wishlists with the further possibility to share them with friends.
- * Version:           1.1.9
+ * Version:           1.2.1
  * Author:            Tugas Virtual Solution
  * Author URI:        https://tugasvirtualsolutions.com/
  * License:           GPL-2.0+

@@ -40,6 +40,12 @@ global $premmerce_wishlist_frontend;
     width: 100%;
 }
 
+@media (min-width: 981px) {
+    #left-area {
+        width: 100%;
+    }
+}
+
 @media (min-width: 960px) {
     .wl-product-list > * {
         width: 33.3% !important;
@@ -59,7 +65,7 @@ jQuery(document).ready(function ($) {
 $(function() {
   //select all checkboxes
   $(".select_all").on('click', function() { //"select all" change 
-    $(".orderforsample").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
+    $(".orderforsample").data('checked', !$(".orderforsample").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
     if ($(".orderforsample").data('checked')) {
       this.innerHTML = "Remove All";
     } else {
@@ -737,8 +743,8 @@ jQuery(document).ready(function ($) {
 $(function() {
   //select all checkboxes
   $(".select_all").on('click', function() { //"select all" change 
-    $(".checkbox").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".checkbox").data('checked')); //change all ".checkbox" checked status
-    if ($(".checkbox").data('checked')) {
+    $(".orderforsample").data('checked', !$(".orderforsample").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
+    if ($(".orderforsample").data('checked')) {
       this.innerHTML = "Remove All";
     } else {
       this.innerHTML = "Select All";
@@ -746,8 +752,8 @@ $(function() {
   });
 
   $(".select_all_mobile").click(function() { //"select all" change 
-    $(".checkbox").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".checkbox").data('checked')); //change all ".checkbox" checked status
-    if ($(".checkbox").data('checked')) {
+    $(".orderforsample").data('checked', !$(".orderforsample").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
+    if ($(".orderforsample").data('checked')) {
         this.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>';
     } else {
         this.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z"/></svg>';
@@ -758,7 +764,7 @@ $(function() {
 
 $(".share-project-btn").click(function(event){
     $("#authentication-modal").removeClass("hidden");
-    $('.checkbox:checkbox:checked').each(function(){
+    $('.orderforsample:checkbox:checked').each(function(){
         $("#order_items_names").append('<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">• ' + $(this).val() + '</li>');
     });
     var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
@@ -933,12 +939,6 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
     </div>
   </div>
 </div>
-            <!-- Frame header end -->
-                    <?php add_action('woocommerce_after_shop_loop_item', 'add_a_custom_button', 5 );
-function add_a_custom_button() {
-global $product;
-echo '<div style="margin-bottom:10px;"><input type="checkbox" class="checkbox" data-title href="' . esc_attr( $product->get_permalink() ) . '" value="' . esc_attr( $product->get_title() ) . '" /> ' . __('ORDER FREE SAMPLE') . '</div>';
-} ?>
             <div class="wl-frame__inner wl-content__row wl-content__row--sm">
                 <?php if($wl['products']): ?>
                     <?php $productsIds = array_map(function($product){
