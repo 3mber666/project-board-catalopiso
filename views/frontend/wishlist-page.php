@@ -35,6 +35,23 @@ global $premmerce_wishlist_frontend;
     li.product {
         margin-top: 20px !important;
     }
+
+    span.et_shop_image img {
+    width: 100%;
+}
+
+@media (min-width: 960px) {
+    .wl-product-list > * {
+        width: 33.3% !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .et_right_sidebar #left-area {
+        padding: 30px;
+    }
+}
+
 </style>
 <script>
 jQuery(document).ready(function ($) {
@@ -42,8 +59,8 @@ jQuery(document).ready(function ($) {
 $(function() {
   //select all checkboxes
   $(".select_all").on('click', function() { //"select all" change 
-    $(".checkbox").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".checkbox").data('checked')); //change all ".checkbox" checked status
-    if ($(".checkbox").data('checked')) {
+    $(".orderforsample").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
+    if ($(".orderforsample").data('checked')) {
       this.innerHTML = "Remove All";
     } else {
       this.innerHTML = "Select All";
@@ -51,8 +68,8 @@ $(function() {
   });
 
   $(".select_all_mobile").click(function() { //"select all" change 
-    $(".checkbox").data('checked', !$(".checkbox").data('checked')).prop('checked', $(".checkbox").data('checked')); //change all ".checkbox" checked status
-    if ($(".checkbox").data('checked')) {
+    $(".orderforsample").data('checked', !$(".orderforsample").data('checked')).prop('checked', $(".orderforsample").data('checked')); //change all ".checkbox" checked status
+    if ($(".orderforsample").data('checked')) {
         this.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>';
     } else {
         this.innerHTML = '<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 6.285l-11.16 12.733-6.84-6.018 1.319-1.49 5.341 4.686 9.865-11.196 1.475 1.285z"/></svg>';
@@ -63,7 +80,7 @@ $(function() {
 
 $(".share-project-btn").click(function(event){
     $("#authentication-modal").removeClass("hidden");
-    $('.checkbox:checkbox:checked').each(function(){
+    $('.orderforsample:checkbox:checked').each(function(){
         $("#order_items_names").append('<li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">• ' + $(this).val() + '</li>');
     });
     var order_items_names = $("input:checkbox:checked").map(function(){ return $(this).attr("value"); }).toArray().toString();
@@ -78,8 +95,9 @@ $("#close-order").click(function(event){
 });
 </script>
 <script>
-jQuery('#sub').submit(function(e){
+jQuery(document).ready(function ($) {
 
+    jQuery('#sub').submit(function(e){
     e.preventDefault();
 
     var email =  jQuery('#email').val();
@@ -119,6 +137,7 @@ jQuery.ajax({
 
 }); 
 });
+});
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -126,11 +145,6 @@ tailwind.config = {
   important: true,
 }
 </script>
-<?php add_action('woocommerce_after_shop_loop_item', 'add_a_custom_button', 5 );
-function add_a_custom_button() {
-global $product;
-echo '<div style="margin-bottom:10px;"><input type="checkbox" class="checkbox" data-title href="' . esc_attr( $product->get_permalink() ) . '" value="' . esc_attr( $product->get_title() ) . '" /> ' . __('ORDER FREE SAMPLE') . '</div>';
-} ?>
 <div class="hidden z-[999] fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto bg-slate-900/40"
 id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
 <div class="max-w-lg my-6 mx-auto relative w-auto pointer-events-none">
@@ -177,8 +191,8 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
                         <input type="text" name="state" id="state" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your State" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
-                        <label for="zip" class="block mb-2 text-sm font-medium text-gray-900">Zip</label>
-                        <input type="number" name="zip" id="zip" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
+                        <label for="zipcode" class="block mb-2 text-sm font-medium text-gray-900">Zip</label>
+                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>
@@ -716,25 +730,6 @@ span.et_shop_image img {
         padding: 30px;
     }
 }
-
-@media (max-width: 480px) {
-    .project-breadcrumb {
-        display: grid;
-        justify-content: unset;
-        align-items: unset;
-        padding: 35px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-
-    .arrange-btn {
-        display: none;
-    }
-
-    .ordersmpteldive2 {
-        font-size: 15px !important;
-    }
-}
 </style>
 <script>
 jQuery(document).ready(function ($) {
@@ -873,7 +868,7 @@ id="authentication-modal" tabindex="-1" aria-labelledby="exampleModalScrollableL
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="zip" class="block mb-2 text-sm font-medium text-gray-900">Zip</label>
-                        <input type="number" name="zip" id="zip" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
+                        <input type="number" name="zipcode" id="zipcode" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Zipcode" required="">
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone</label>

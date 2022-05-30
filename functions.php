@@ -78,7 +78,7 @@ function callback_send_email() {
 
     if($isOrder) {
         foreach ($order_items_names as $value) {
-            $w .= '<div>• '.$value.'</div> <br>';
+            $w .= '<div>• '.$value.'</div>';
         }
 
         $headers = "Content-type:text/html;charset=UTF-8";
@@ -88,7 +88,7 @@ function callback_send_email() {
             "$w".
             "<br><br><br>".
             "<b>------</b><br>".
-            "Customer Information: ".
+            "Customer Information: <br>".
             "Name: $name <br>".
             "Email: $email <br>".
             "Note: $note <br>".
