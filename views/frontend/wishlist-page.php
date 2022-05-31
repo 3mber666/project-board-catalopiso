@@ -62,6 +62,10 @@ global $premmerce_wishlist_frontend;
     padding: 0 0 0px 0em !important;
 }
 
+.half-box.onlistiapf {
+    display: <?= $_GET['pricing'] == 'show' ? 'block !important' : ' none !important' ?> ;
+}
+
 </style>
 <script>
 jQuery(document).ready(function ($) {
@@ -757,6 +761,10 @@ span.et_shop_image img {
 
 #left-area ul, .entry-content ul, .et-l--body ul, .et-l--footer ul, .et-l--header ul {
     padding: 0 0 0px 0em !important;
+}
+
+.half-box.onlistiapf {
+    display: <?= $_GET['pricing'] == 'show' ? 'block !important' : ' none !important' ?> ;
 }
 
 </style>
